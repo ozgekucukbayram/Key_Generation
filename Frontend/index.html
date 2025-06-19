@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    
+        <!-- CSS dosyasını bağlama -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+
+                <!-- Başlık ve açıklama -->
+        <h1 class="title">🔑 Password Generator</h1>
+        <p class="subtitle">Quickly and securely generate passwords</p>
+
+                <!-- Base Text input alanı (gizli, NLP modları için kullanılıyor) -->
+        <div id="inputTextGroup" class="input-group" style="display: none;">
+            <label for="inputText">Enter Base Text:</label>
+            <input type="text" id="inputText" placeholder="Enter text...">
+        </div>
+
+                <!-- Parola uzunluğu seçimi -->
+        <div class="input-group">
+            <label for="length">Password Length:</label>
+            <input type="number" id="length" value="8" min="1" max="32">
+            <small id="remainingInfo">Remaining: 8</small>
+        </div>
+
+                <!-- Karakter türü seçimleri -->
+        <div class="checkbox-group">
+            <label><input type="checkbox" id="includeLetters"> Letters <input type="number" id="lettersCount"
+                    class="count-input" value="0" min="0"></label>
+            <label><input type="checkbox" id="includeUppercase"> Uppercase Letters <input type="number"
+                    id="uppercaseCount" class="count-input" value="0" min="0"></label>
+            <label><input type="checkbox" id="includeNumbers"> Numbers <input type="number" id="numbersCount"
+                    class="count-input" value="0" min="0"></label>
+            <label><input type="checkbox" id="includeSymbols"> Symbols <input type="number" id="symbolsCount"
+                    class="count-input" value="0" min="0"></label>
+            <label><input type="checkbox" id="includeEmojis"> Emojis <input type="number" id="emojisCount"
+                    class="count-input" value="0" min="0"></label>
+        </div>
+
+                <!-- Parola oluşturma ve kopyalama butonları -->
+        <div class="button-group">
+            <button id="generate">Generate 🔄</button>
+            <button id="copy">Copy 📋</button>
+        </div>
+        
+                <!-- Brute-force ve test sonuçlarını gösterme butonları -->
+        <div class="button-group">
+            <button id="showBrute">Show Brute Force 🧠</button>
+            <button id="showTests">Show Test Results 🧪</button>
+        </div>
+        
+                <!-- Üretilen parolanın gösterildiği alan -->
+        <div id="password" class="password-output" style="user-select: all; display: none;"></div>
+
+                <!-- Önerilen parola alanı (emoji modunda) -->
+        <div id="recommendedPassword" class="password-output" style="display: none;"></div>
+
+                <!-- Brute-force süresi sonuç alanı -->
+        <div id="bruteTime" class="brute-output" style="display: none;"></div>
+
+                <!-- Randomness test sonuçları alanı -->
+        <div id="testResults" class="test-results" style="margin-top: 20px; display: none;"></div>
+        
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+<!-- About Us sayfasına link -->
+<a href="about.html" class="about-button">About Us</a>

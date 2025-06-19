@@ -1,0 +1,228 @@
+body {
+    font-family: 'Poppins', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+    background-color: #0f0f2b;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.project-title {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fdd835; /* Sarımsı renk */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    background: #1c1c3c;
+    padding: 30px;
+    width: 480px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #5f0260;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #c1a5a5;
+}
+
+.input-group, .checkbox-group, .button-group {
+    margin-bottom: 20px;
+}
+
+.checkbox-group label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.checkbox-group label span {
+    flex: 1;
+    text-align: left;
+}
+
+input[type="number"] {
+    width: 20%;
+    padding: 8px;
+    border-radius: 12px;
+    border: none;
+    margin-top: 5px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 14px;
+    backdrop-filter: blur(6px);
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    border: none;
+    margin-top: 5px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 14px;
+    backdrop-filter: blur(6px);
+    text-align: center;
+}
+
+.count-input {
+    width: 60px; 
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 14px;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    text-align: center;
+    margin-left: 15px; 
+}
+
+
+.count-input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+button {
+    background: #f72585;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 12px;
+    margin: 5px 2px;
+    width: 48%;
+    font-size: 14px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #fb5096;
+    transform: translateY(-2px);
+}
+
+.password-output {
+    margin-top: 15px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 12px;
+    border: none;
+    width: 100%;
+    max-width: 100%;
+    height: 80px; /* <<< SABİT YÜKSEKLİK */
+    overflow-y: auto; /* <<< TAŞAN İÇERİK KAYDIRILIR */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+}
+#recommendedPassword {
+    height: auto !important;
+    overflow-y: visible !important;
+}
+
+#remainingInfo {
+    display: block;
+    margin-top: 5px;
+    color: #facc15;
+    font-size: 12px;
+}
+.about-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.about-button:hover {
+    background-color: #555;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 60%;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: black;
+}
+#entropyDisplay {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    display: none; /* Initially hidden */
+}
+.brute-output {
+    .brute-output {
+        margin-top: 20px;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        display: none;
+    }
+    
+}
+
+  
