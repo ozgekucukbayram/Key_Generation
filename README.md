@@ -49,6 +49,7 @@ nltk
 rapidfuzz
 regex
 python -m spacy download en_core_web_sm
+```
 API varsayılan olarak http://127.0.0.1:5000 adresinde çalışır.
 POST /generate-password
 Content-Type: application/json
