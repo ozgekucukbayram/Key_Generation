@@ -109,15 +109,15 @@ Bu proje **MIT lisansı** ile lisanslanmıştır.
 ## 🗺️ Sistem Mimarisi
 ```mermaid
 flowchart LR
-    A[👩‍💻 Kullanıcı / Web UI] -->|İstek (metin, uzunluk, seçenekler)| B[🌐 Flask API]
-    subgraph S[NLP & Şifre Üretim Çekirdeği]
-      B --> C[🧠 NLP (spaCy)\nÖzne-Fiil-Nesne çıkarımı]
-      C --> D[🔎 Anlamsal Eşleştirme\n(emoji sözlüğü + eş anlamlılar)]
-      D --> E[🔐 Şifre Üretici\n(emoji + klasik karakterler)]
-      E --> F[🎲 Rastgelelik Testleri\nMonobit • Runs • CumSums • Serial]
-      E --> G[🛡️ Brute-force Simülasyonu\n(süre/deneme tahmini)]
+    A[Kullanici / Web UI] -->|Istek (metin, uzunluk, secenekler)| B[Flask API]
+    subgraph Cekirdek[NLP ve Sifre Uretim Motoru]
+      B --> C[NLP (spaCy)<br/>Oznes-Fiil-Nesne cikarma]
+      C --> D[Anlamsal Eslesme<br/>(emoji sozlugu + es anlamlilar)]
+      D --> E[Sifre Uretici<br/>(emoji + klasik karakterler)]
+      E --> F[Rastgelelik Testleri<br/>Monobit / Runs / CumSums / Serial]
+      E --> G[Brute-force Simulasyonu<br/>(sure/deneme tahmini)]
     end
-    F --> H[📤 Yanıt]
+    F --> H[Yanit]
     G --> H
     H -->|JSON| A
 ```
