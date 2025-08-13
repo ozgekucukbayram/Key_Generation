@@ -105,19 +105,3 @@ Bu proje **MIT lisansı** ile lisanslanmıştır.
 - Bilge Demir  
 
 ---
-
-## 🗺️ Sistem Mimarisi
-```mermaid
-flowchart LR
-    A[Kullanici / Web UI] -->|Istek (metin, uzunluk, secenekler)| B[Flask API]
-    subgraph Cekirdek[NLP ve Sifre Uretim Motoru]
-      B --> C[NLP (spaCy)<br/>Oznes-Fiil-Nesne cikarma]
-      C --> D[Anlamsal Eslesme<br/>(emoji sozlugu + es anlamlilar)]
-      D --> E[Sifre Uretici<br/>(emoji + klasik karakterler)]
-      E --> F[Rastgelelik Testleri<br/>Monobit / Runs / CumSums / Serial]
-      E --> G[Brute-force Simulasyonu<br/>(sure/deneme tahmini)]
-    end
-    F --> H[Yanit]
-    G --> H
-    H -->|JSON| A
-```
